@@ -13,8 +13,8 @@ const server = http.createServer((req, res) => {
     });
     fs.readFile("./pages/index.html", null, function (error, data) {
       if (error) {
-        response.writeHead(404);
-        respone.write("Whoops! File not found!");
+        res.writeHead(404);
+        res.write("Whoops! File not found!");
       } else {
         res.write(data);
       }
@@ -26,8 +26,8 @@ const server = http.createServer((req, res) => {
     });
     fs.readFile("./pages/about.html", null, function (error, data) {
       if (error) {
-        response.writeHead(404);
-        respone.write("Whoops! File not found!");
+        res.writeHead(404);
+        res.write("Whoops! File not found!");
       } else {
         res.write(data);
       }
@@ -56,8 +56,8 @@ const server = http.createServer((req, res) => {
     });
     fs.readFile("./pages/404.html", null, function (error, data) {
       if (error) {
-        response.writeHead(404);
-        respone.write("Whoops! File not found!");
+        res.writeHead(404);
+        res.write("Whoops! File not found!");
       } else {
         res.write(data);
       }
